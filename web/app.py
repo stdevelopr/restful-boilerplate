@@ -32,7 +32,6 @@ def checkPostedData(postedData, functionName):
 class Visit(Resource):
     def get(self):
         prev_num = UserNum.find({})[0]['num_of_visits']
-        print(prev_num)
         new_num = prev_num + 1
         UserNum.update({}, {"$set": {"num_of_visits": new_num}})
         return str("Hello visitor number: "+ str(new_num))
