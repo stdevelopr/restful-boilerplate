@@ -75,12 +75,6 @@ api.add_resource(Read, "/")
 api.add_resource(Visit, "/visit")
 
 
-#Here are another way of defining endpoints
-################################################@@
-@app.route('/')
-def hello_world():
-    return "Hello World"
-
 
 #Run the application
 ############################################
